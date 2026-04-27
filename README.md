@@ -91,7 +91,7 @@ The `scripts/` folder contains utilities for local setup, data access, and repo 
 |---|---|
 | [`scripts/setup.sh`](./scripts/setup.sh) | Creates a `.venv` virtual environment and installs all dependencies from `requirements.txt` |
 | [`scripts/download_data.sh`](./scripts/download_data.sh) | Prints step-by-step instructions for downloading the dataset from Kaggle or Google Drive |
-| [`scripts/extract_figures.py`](./scripts/extract_figures.py) | Extracts all image outputs from `main_notebook.ipynb` and saves them to `assets/` |
+| [`scripts/extract_figures.py`](./scripts/extract_figures.py) | Extracts all image outputs from `main_notebook.ipynb` and saves them to `graphical_plots/` |
 | [`scripts/verify_setup.py`](./scripts/verify_setup.py) | Checks that all expected repo files exist and all key packages are installed |
 
 Quick usage:
@@ -103,7 +103,7 @@ bash scripts/setup.sh
 # Get dataset download instructions
 bash scripts/download_data.sh
 
-# Extract notebook figures to assets/
+# Extract notebook figures to graphical_plots/
 python scripts/extract_figures.py
 
 # Verify repo structure and dependencies
@@ -158,10 +158,18 @@ yahoo-answers-topic-classification/
 ├── data/
 │   └── README_data.md           # Instructions for downloading the dataset
 │
+├── graphical_plots/
+│   ├── EDA-1.png                # Cross-category vocabulary overlap heatmap
+│   ├── EDA-2.png                # Empty content rate per category
+│   ├── EDA-3.png                # Within-class lexical diversity
+│   ├── RQ-1.png                 # Classifier performance at scale
+│   ├── RQ-2.png                 # F1 gain by input configuration
+│   └── RQ-3.png                 # UMAP projection — BERTopic results
+│
 └── scripts/
     ├── setup.sh                 # Create virtual environment and install dependencies
     ├── download_data.sh         # Dataset download instructions
-    ├── extract_figures.py       # Extract notebook image outputs to assets/
+    ├── extract_figures.py       # Extract notebook image outputs to graphical_plots/
     └── verify_setup.py          # Validate repo structure and dependencies
 ```
 
